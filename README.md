@@ -1,8 +1,8 @@
-# [link-trie](https://www.npmjs.com/package/link-trie)
+# link-trie
 
 [Trie](https://en.wikipedia.org/wiki/Trie) data structure built to process link paths
 
-## Installation
+## Installation ([npm]((https://www.npmjs.com/package/link-trie)))
 
 ```bash
 npm install link-trie
