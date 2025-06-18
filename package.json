@@ -2,6 +2,12 @@
   "name": "link-trie",
   "version": "1.0.0",
   "description": "Trie data structure built to process link paths",
+  "keywords": [
+    "trie",
+    "link",
+    "path",
+    "url"
+  ],
   "homepage": "https://github.com/jonathan-dong/link-trie#readme",
   "bugs": {
     "url": "https://github.com/jonathan-dong/link-trie/issues"
