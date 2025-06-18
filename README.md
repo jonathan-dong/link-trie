@@ -1,6 +1,6 @@
 # link-trie
 
-[Trie](https://en.wikipedia.org/wiki/Trie) data structure built to process link paths ([npm]((https://www.npmjs.com/package/link-trie)))
+[Trie](https://en.wikipedia.org/wiki/Trie) data structure built to process link paths ([npm](https://www.npmjs.com/package/link-trie))
 
 ## Installation
 
