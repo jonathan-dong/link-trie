@@ -19,11 +19,22 @@
   "license": "MIT",
   "author": "Jonathan Dong <jadong@umich.edu>",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "tsup",
     "test": "jest"
   },
   "devDependencies": {
-    "jest": "^30.0.0"
+    "@types/jest": "^30.0.0",
+    "jest": "^30.0.0",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
   }
 }

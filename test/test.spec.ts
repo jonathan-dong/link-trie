@@ -1,4 +1,4 @@
-const LinkTrie = require('../index.js');
+import { LinkTrie } from '../src/index';
 
 test('Insert and search', () => {
   const trie = new LinkTrie();

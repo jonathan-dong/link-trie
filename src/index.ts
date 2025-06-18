@@ -1,17 +1,18 @@
-class TrieNode {
-    constructor() {
-        this.children = new Map();
-        this.isEndOfWord = false;
-    }
-}
+import { TrieNode } from './trieNode'
 
-class LinkTrie {
+export class LinkTrie {
+    private root: TrieNode;
+
+    private createNode(): TrieNode {
+        return { children: new Map<string, TrieNode>(), isEndOfPath: false };
+    }
+
     /**
      * Creates an instance of LinkTrie.
      * @param {string[]} paths - An array of paths to initialize the trie with (optional).
      */
-    constructor(paths = []) {
-        this.root = new TrieNode();
+    constructor(paths: string[] = []) {
+        this.root = this.createNode();
         paths.forEach(path => this.insert(path));
     }
 
@@ -19,7 +20,7 @@ class LinkTrie {
      * Inserts a path into the trie.
      * @param {string} path - The path to insert.
      */
-    insert(path) {
+    insert(path: string) {
         const parts = path.split('/').filter(Boolean);
         let curr = this.root;
 
@@ -28,12 +29,12 @@ class LinkTrie {
                 break;
             }
             if (!curr.children.has(part)) {
-                curr.children.set(part, new TrieNode());
+                curr.children.set(part, this.createNode());
             }
-            curr = curr.children.get(part);
+            curr = curr.children.get(part)!;
         }
 
-        curr.isEndOfWord = true;
+        curr.isEndOfPath = true;
     }
 
     /**
@@ -41,7 +42,7 @@ class LinkTrie {
      * @param {string} path - The path to search for.
      * @returns {boolean} True if the path exists, false otherwise.
      */
-    search(path) {
+    search(path: string) : boolean {
         const parts = path.split('/').filter(Boolean);
         let curr = this.root;
 
@@ -52,10 +53,10 @@ class LinkTrie {
             if (!curr.children.has(part)) {
                 return false;
             }
-            curr = curr.children.get(part);
+            curr = curr.children.get(part)!;
         }
 
-        return curr.isEndOfWord;
+        return curr.isEndOfPath;
     }
 
     /**
@@ -63,7 +64,7 @@ class LinkTrie {
      * @param {string} path - The path to check.
      * @returns {boolean} True if the path is a prefix, false otherwise.
      */
-    isPrefix(path) {
+    isPrefix(path: string): boolean {
         const parts = path.split('/').filter(Boolean);
         let curr = this.root;
 
@@ -74,11 +75,9 @@ class LinkTrie {
             if (!curr.children.has(part)) {
                 return false;
             }
-            curr = curr.children.get(part);
+            curr = curr.children.get(part)!;
         }
 
         return true; 
     }
 }
-
-module.exports = LinkTrie;
