@@ -1,0 +1,23 @@
+{
+  "name": "link-trie",
+  "version": "1.0.0",
+  "description": "Trie data structure built to process link paths",
+  "homepage": "https://github.com/jonathan-dong/link-trie#readme",
+  "bugs": {
+    "url": "https://github.com/jonathan-dong/link-trie/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathan-dong/link-trie.git"
+  },
+  "license": "MIT",
+  "author": "Jonathan Dong <jadong@umich.edu>",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^30.0.0"
+  }
+}
