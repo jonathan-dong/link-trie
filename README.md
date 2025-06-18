@@ -2,7 +2,7 @@
 
 [Trie](https://en.wikipedia.org/wiki/Trie) data structure built to process link paths
 
-## Installation ([npm]((https://www.npmjs.com/package/link-trie)))
+## Installation
 
 ```bash
 npm install link-trie
