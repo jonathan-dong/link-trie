@@ -5,9 +5,9 @@ class TrieNode {
     }
 }
 
-class PathTrie {
+class LinkTrie {
     /**
-     * Creates an instance of PathTrie.
+     * Creates an instance of LinkTrie.
      * @param {string[]} paths - An array of paths to initialize the trie with (optional).
      */
     constructor(paths = []) {
@@ -81,4 +81,4 @@ class PathTrie {
     }
 }
 
-module.exports = PathTrie;
+module.exports = LinkTrie;

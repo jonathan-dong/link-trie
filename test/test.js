@@ -1,7 +1,7 @@
-const PathTrie = require('../index.js');
+const LinkTrie = require('../index.js');
 
 test('Insert and search', () => {
-  const trie = new PathTrie();
+  const trie = new LinkTrie();
   
   trie.insert('/a/b/c');
   trie.insert('/a/b/d');
@@ -18,7 +18,7 @@ test('Insert and search', () => {
 });
 
 test('Insert and search with wildcards', () => {
-  const trie = new PathTrie();
+  const trie = new LinkTrie();
   
   trie.insert('/a/b/*');
   trie.insert('/x/y/z/*');
@@ -34,7 +34,7 @@ test('Insert and search with wildcards', () => {
 });
 
 test('Insert and search without leading slashes', () => {
-  const trie = new PathTrie();
+  const trie = new LinkTrie();
   
   trie.insert('a/b/c');
   trie.insert('/x/y/z');
@@ -47,7 +47,7 @@ test('Insert and search without leading slashes', () => {
 });
 
 test('Insert and prefix search', () => { 
-  const trie = new PathTrie();
+  const trie = new LinkTrie();
   
   trie.insert('/a/b/c');
   trie.insert('/a/b/d');
